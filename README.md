@@ -3,7 +3,7 @@ Cliente js é uma simples API que visa facilitar a implementação do WebSockt J
 
 ## Para utilizar
 ```js
-<script src='wsApi.js'></script><br>
+<script src='wsApi.js'></script>
 <script>
   ws.con("ws://localhost:8080");//abrindo a conexão
   ws.open(funcion(){alert('1º function')}); //Espera como parametro uma function de callback
