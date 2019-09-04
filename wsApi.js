@@ -35,13 +35,18 @@
             "message":function(d){//@param CallBackFunction d;
                 conMessage.push(d);
             },
-            "send":function(){
+            "send":function(g){
                 if(conStatus==true){
-                    con.send("Ola");
+                    con.send(g);
                 }else{
-                    setTimeout(function(){
-                        con.send("Ola");
-                    },500);
+                    let a =
+                    setInterval(function(){
+                        if(conStatus==true){
+                            con.send(g);
+                            clearInterval(a);
+                        }
+                        
+                    },100);
                 }
             }
         }
